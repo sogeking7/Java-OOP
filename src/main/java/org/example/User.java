@@ -1,9 +1,13 @@
 package org.example;
 
+import java.util.List;
+
 public class User {
 
     private String _name;
     private String _membership;
+
+    public static List<User> admins;
 
     public String toString() {
         return get_name() + " " + get_membership();
