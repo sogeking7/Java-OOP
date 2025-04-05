@@ -25,5 +25,8 @@ public class Main {
         for (int i = 0; i < users.size(); i++) {
             System.out.println(users.get(i));
         }
+        for (User ui : users) {
+            System.out.println(ui);
+        }
     }
 }
