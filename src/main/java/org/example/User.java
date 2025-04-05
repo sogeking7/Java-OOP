@@ -9,6 +9,12 @@ public class User {
 
     public static List<User> admins;
 
+    public static void print_admin_names() {
+        for (User u : admins) {
+            System.out.println(u.get_name());
+        }
+    }
+
     public String toString() {
         return get_name() + " " + get_membership();
     }

@@ -12,8 +12,6 @@ public class Main {
         User.admins.add(new User("Jhon"));
         User.admins.add(new User("Oleg"));
 
-        for (User ui : User.admins) {
-            System.out.println(ui);
-        }
+        User.print_admin_names();
     }
 }
