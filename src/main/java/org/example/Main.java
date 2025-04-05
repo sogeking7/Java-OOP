@@ -7,14 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
         Student s = new Student();
-        System.out.println(s.get_verified());
-        s.set_membership(User.Membership.Gold);
-        System.out.println(s.get_membership());
-        // User.admins = new ArrayList<User>();
-        // User.admins.add(new User("Peter"));
-        // User.admins.add(new User("Jhon"));
-        // User.admins.add(new User("Oleg"));
+        s.set_name("student");
+        Teacher t = new Teacher();
+        t.set_name("teacher");
 
-        // User.print_admin_names();
+        User.admins = new ArrayList<User>();
+        User.admins.add(s);
+        User.admins.add(t);
+        User.admins.add(new Teacher("Peter"));
+        User.admins.add(new Student("Jhon"));
+        User.admins.add(new Student("Oleg"));
+
+        User.print_admin_names();
+        for (User u : User.admins) {
+            u.verify();
+        }
     }
 }

@@ -2,13 +2,20 @@ package org.example;
 
 public class Student extends User {
 
-    private boolean _verified = false;
-
-    void set_verified(boolean verified) {
-        _verified = verified;
+    public Student() {
+        super();
     }
 
-    boolean get_verified() {
-        return _verified;
+    public Student(String name) {
+        super(name);
+    }
+
+    public Student(String name, String membership) {
+        super(name, membership);
+    }
+
+    void verify() {
+        System.out.println("Verifying through email");
+        set_verified(true);
     }
 }

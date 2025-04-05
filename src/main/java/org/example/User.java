@@ -2,12 +2,27 @@ package org.example;
 
 import java.util.List;
 
-public class User {
+public abstract class User {
 
     private String _name;
     private String _membership;
 
     public static List<User> admins;
+
+    private boolean _verified = false;
+
+    void set_verified(boolean verified) {
+        _verified = verified;
+    }
+
+    boolean get_verified() {
+        return _verified;
+    }
+
+    void verify() {
+        System.out.println("Verifying...");
+        set_verified(true);
+    }
 
     public static void print_admin_names() {
         for (User u : admins) {
