@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,5 +16,14 @@ public class Main {
 
         System.out.println(u == u2);
         System.out.println(u.equals(u2));
+
+        ArrayList<User> users = new ArrayList<User>();
+        users.add(u);
+        users.add(new User("Jhon"));
+        users.add(new User("Oleg"));
+
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println(users.get(i));
+        }
     }
 }

@@ -21,6 +21,10 @@ public class User {
 
     public User() {}
 
+    public User(String name) {
+        set_name(name);
+    }
+
     public User(String name, String membership) {
         // 🙅 Incorrect way
         // _name = name;
